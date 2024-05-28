@@ -1,0 +1,10 @@
+#imageGallery {
+    scroll-snap-type: x mandatory;
+}
+
+.snap-center {
+    scroll-snap-align: center;
+}
+.border-glow {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
