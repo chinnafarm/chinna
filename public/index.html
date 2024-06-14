@@ -10,20 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> chinna's</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HXWM0ZRH8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-7HXWM0ZRH8');
-</script>
+        gtag('config', 'G-7HXWM0ZRH8');
+    </script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="custom.css">
-   
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -202,23 +202,27 @@
     <!--GALLERY-->
     <section id="gallery" class="">
         <div class="container bg-black p-5 mt-0 mx-auto">
-          <h1 class="font-bold text-3xl lg:text-5xl text-yellow-500 text-center">Memorie's</h1>
-          <div id="imageGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
-            <div class="relative overflow-hidden rounded-lg group border-glow">
-              <img src="image/chinna.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
+            <h1 class="font-bold text-3xl lg:text-5xl text-yellow-500 text-center">Memorie's</h1>
+            <div id="imageGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+                <div class="relative overflow-hidden rounded-lg group border-glow">
+                    <img src="image/chinna.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
+                </div>
+                <div class="relative overflow-hidden rounded-lg group border-glow">
+                    <img src="image/mom.png"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
+                </div>
+                <div class="relative overflow-hidden rounded-lg group border-glow">
+                    <img src="image/fam.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
+                </div>
+                <div class="relative overflow-hidden rounded-lg group border-glow">
+                    <img src="image/land.png.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
+                </div>
             </div>
-            <div class="relative overflow-hidden rounded-lg group border-glow">
-              <img src="image/mom.png" class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
-            </div>
-            <div class="relative overflow-hidden rounded-lg group border-glow">
-              <img src="image/fam.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
-            </div>
-            <div class="relative overflow-hidden rounded-lg group border-glow">
-              <img src="image/land.png.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg" />
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
 
     <!--SHOPPING-->
@@ -436,7 +440,8 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
                     <ul class="flex space-x-4">
-                        <li><a href="https://wa.me/+918148530305"><i class='bx bxl-whatsapp hover:text-green-500 lg:text-5xl'></i></a></li>
+                        <li><a href="https://wa.me/+918148530305"><i
+                                    class='bx bxl-whatsapp hover:text-green-500 lg:text-5xl'></i></a></li>
                         <li><a href=""><i class='bx bxl-facebook-circle hover:text-blue-500 lg:text-5xl'></i></a></li>
                         <li><a href=""><i class='bx bxl-instagram-alt hover:text-red-500 lg:text-5xl'></i></a></li>
                     </ul>
@@ -530,7 +535,25 @@
             });
         });
 
-      
+        document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Disable certain key combinations
+    document.addEventListener('keydown', function(e) {
+        // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+        if (
+            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // I, J
+            (e.ctrlKey && e.keyCode === 85) || // U
+            (e.keyCode === 123) || // F12
+            (e.ctrlKey && e.keyCode === 83) // S
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+
     </script>
 
 </body>
