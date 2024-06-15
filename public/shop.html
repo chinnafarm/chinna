@@ -10,11 +10,9 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-7HXWM0ZRH8');
     </script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
 </head>
 
 <body class=" ">
@@ -27,10 +25,40 @@
             <p class="text-white text-xl md:text-2xl">
                 We're working hard to bring you something amazing. Stay tuned!
             </p>
+            <div>
+                <button id="home-button" class="mt-8 bg-blue-500 text-white py-2 px-4 rounded">HOME</button>
+            </div>
         </div>
     </section>
 
+    <script>
+        // Ensure DOM is fully loaded before accessing elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event listener to the HOME button
+            document.getElementById('home-button').addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
 
+            // Disable right-click context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+            // Disable certain key combinations
+            document.addEventListener('keydown', function(e) {
+                // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+                if (
+                    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // I, J
+                    (e.ctrlKey && e.keyCode === 85) || // U
+                    (e.keyCode === 123) || // F12
+                    (e.ctrlKey && e.keyCode === 83) // S
+                ) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
