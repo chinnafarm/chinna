@@ -16,49 +16,221 @@
 </head>
 
 <body class=" ">
-    <section>
-        <div class="min-h-screen bg-gray-900 flex flex-col items-center justify-center relative px-4">
-            <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-30"
-                style="background-image: url('./back.jpg');">
+    <section id="shopping" class="bg-gray-100 py-10">
+        <div class="container mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl lg:text-5xl font-semibold text-yellow-500">Products</h2>
             </div>
-            <h1 class="text-5xl md:text-7xl text-white font-bold mb-8 z-10">Coming Soon</h1>
-            <p class="text-white text-xl md:text-2xl">
-                We're working hard to bring you something amazing. Stay tuned!
-            </p>
-            <div>
-                <button id="home-button" class="mt-8 bg-blue-500 text-white py-2 px-4 rounded">HOME</button>
+            <div class="text-center mb-10">
+                <select id="category-select"
+                    class="mt-1 block w-1/2 mx-auto p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    <option value="all">All Products</option>
+                    <option value="coconut">Coconut</option>
+                    <option value="lemon">Lemon</option>
+                    <option value="rice">Rice</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                <!-- Existing Product Cards -->
+                <!-- Product Card 1 - Coconut Oil -->
+                <div class="product-card coconut bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="coconut">
+                    <img src="image/coconut.png" class="w-full h-32 object-cover rounded-t-lg" alt="Coconut Oil">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Oil</h3>
+                        <div class="mb-2">
+                            <label for="coconut-oil-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="coconut-oil-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="1 liter">1 liter - &#8377;35</option>
+                                <option value="2 liters">2 liters - &#8377;70</option>
+                                <option value="5 liters">5 liters - &#8377;175</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="coconut-oil-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="coconut-oil-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 - Coconut Shell -->
+                <div class="product-card coconut bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="coconut">
+                    <img src="image/coconut_shell.png" class="w-full h-32 object-cover rounded-t-lg" alt="Coconut Shell">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Shell</h3>
+                        <div class="mb-2">
+                            <label for="coconut-shell-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="coconut-shell-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="1 kg">1 kg - &#8377;50</option>
+                                <option value="2 kg">2 kg - &#8377;100</option>
+                                <option value="5 kg">5 kg - &#8377;250</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="coconut-shell-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="coconut-shell-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 - Coconut Water -->
+                <div class="product-card coconut bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="coconut">
+                    <img src="image/coconut_water.png" class="w-full h-32 object-cover rounded-t-lg" alt="Coconut Water">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Water</h3>
+                        <div class="mb-2">
+                            <label for="coconut-water-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="coconut-water-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="300 ml">300 ml - &#8377;50</option>
+                                <option value="500 ml">500 ml - &#8377;80</option>
+                                <option value="1 liter">1 liter - &#8377;150</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="coconut-water-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="coconut-water-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 4 - Nattu Kholi -->
+                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                    <img src="image/hen.png" class="w-full h-32 object-cover rounded-t-lg" alt="Nattu Kholi">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Nattu Kholi</h3>
+                        <div class="mb-2">
+                            <label for="nattu-kholi-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="nattu-kholi-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="1 kg">1 kg - &#8377;500</option>
+                                <option value="2 kg">2 kg - &#8377;1000</option>
+                                <option value="5 kg">5 kg - &#8377;2500</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="nattu-kholi-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="nattu-kholi-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 5 - Egg -->
+                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                    <img src="image/eggs.png" class="w-full h-32 object-cover rounded-t-lg" alt="Egg">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Egg</h3>
+                        <div class="mb-2">
+                            <label for="egg-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="egg-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="1 dozen">1 dozen - &#8377;120</option>
+                                <option value="2 dozen">2 dozen - &#8377;240</option>
+                                <option value="5 dozen">5 dozen - &#8377;600</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="egg-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="egg-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 6 - Fish -->
+                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                    <img src="image/fish.png" class="w-full h-32 object-cover rounded-t-lg" alt="Fish">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Rice</h3>
+                        <div class="mb-2">
+                            <label for="fish-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="fish-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="1 kg">1 kg - &#8377;200</option>
+                                <option value="2 kg">2 kg - &#8377;400</option>
+                                <option value="5 kg">5 kg - &#8377;1000</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="fish-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="fish-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 7 - Peanut -->
+                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                    <img src="image/peanut.png" class="w-full h-32 object-cover rounded-t-lg" alt="Peanut">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Peanut</h3>
+                        <div class="mb-2">
+                            <label for="peanut-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="peanut-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="1 kg">1 kg - &#8377;100</option>
+                                <option value="2 kg">2 kg - &#8377;200</option>
+                                <option value="5 kg">5 kg - &#8377;500</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="peanut-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="peanut-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 8 - Moringa -->
+                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                    <img src="image/moringa.png" class="w-full h-32 object-cover rounded-t-lg" alt="Moringa">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Moringa</h3>
+                        <div class="mb-2">
+                            <label for="moringa-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="moringa-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="1 kg">1 kg - &#8377;120</option>
+                                <option value="2 kg">2 kg - &#8377;240</option>
+                                <option value="5 kg">5 kg - &#8377;600</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="moringa-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="moringa-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more product cards as needed -->
             </div>
         </div>
     </section>
 
-    <script>
-        // Ensure DOM is fully loaded before accessing elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click event listener to the HOME button
-            document.getElementById('home-button').addEventListener('click', function() {
-                window.location.href = 'index.html';
-            });
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const categorySelect = document.getElementById("category-select");
+            const productCards = document.querySelectorAll(".product-card");
 
-            // Disable right-click context menu
-            document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-            });
-
-            // Disable certain key combinations
-            document.addEventListener('keydown', function(e) {
-                // Check for F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
-                if (
-                    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // I, J
-                    (e.ctrlKey && e.keyCode === 85) || // U
-                    (e.keyCode === 123) || // F12
-                    (e.ctrlKey && e.keyCode === 83) // S
-                ) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-        });
-    </script>
+            categorySelect.addEventListener("change", function () {
+                const selectedCategory = this.value;
+                productCards.forEach(card => {
+                    if (selectedCategory === "all" || card.dataset.category ===
+</script> -->
 </body>
-
 </html>
