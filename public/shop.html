@@ -13,34 +13,126 @@
         gtag('config', 'G-7HXWM0ZRH8');
     </script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <style>
+        .container {
+            max-width: 960px; /* Adjust as per your layout */
+            margin: 0 auto;
+        }
+    </style> -->
 </head>
 
-<body class=" ">
-    <section id="shopping" class="bg-gray-100 py-10">
-        <div class="container mx-auto">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl lg:text-5xl font-semibold text-yellow-500">Products</h2>
+<body>
+    <section id="shopping" class="bg-gray-100">
+     
+            <div class="container fixed top-0">
+                <div class="text-start bg-green-800 relative">
+                    <h2 class="text-1xl lg:text-3xl font-semibold text-white p-1">
+                        Products
+                    </h2>
+                    <div class="absolute top-0 right-0 mt-2 mr-2">
+                        <a href="#" class="text-white">
+                            <i class="fas fa-shopping-cart" id="cart-icon"></i> <span id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="text-center mb-10">
-                <select id="category-select"
-                    class="mt-1 block w-1/2 mx-auto p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            <div class="container  mx-auto">
+            <div class="text-center mt-16">
+                <select id="category-select" class="mt-1 block w-1/2 mx-auto p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     <option value="all">All Products</option>
                     <option value="coconut">Coconut</option>
                     <option value="lemon">Lemon</option>
+                    <option value="Poultry">Poultry</option>
                     <option value="rice">Rice</option>
                     <!-- Add more options as needed -->
                 </select>
             </div>
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 py-10">
                 <!-- Existing Product Cards -->
                 <!-- Product Card 1 - Coconut Oil -->
+            
+
+                <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
+                    <img src="image/wild_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
+                        <div class="mb-2">
+                            <label for="wild-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="wild-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="1 kg - ₹180">1 kg - ₹180</option>
+                                <option value="2 kg - ₹360">2 kg - ₹360</option>
+                                <option value="5 kg - ₹900">5 kg - ₹900</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="wild-rice-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="wild-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button id="add-to-cart" class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded" disabled>Add to Cart</button>
+                            <button id="place-order" class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded" disabled>Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
+                    <img src="image/wild_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
+                        <div class="mb-2">
+                            <label for="wild-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="wild-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="1 kg - ₹180">1 kg - ₹180</option>
+                                <option value="2 kg - ₹360">2 kg - ₹360</option>
+                                <option value="5 kg - ₹900">5 kg - ₹900</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="wild-rice-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="wild-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button id="add-to-cart" class=" add-to-cartw-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded" disabled>Add to Cart</button>
+                            <button id="place-order" class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded" disabled>Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
+                    <img src="image/wild_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
+                        <div class="mb-2">
+                            <label for="wild-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="wild-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="1 kg">1 kg - &#8377;180</option>
+                                <option value="2 kg">2 kg - &#8377;360</option>
+                                <option value="5 kg">5 kg - &#8377;900</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="wild-rice-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="wild-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
                 <div class="product-card coconut bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="coconut">
                     <img src="image/coconut.png" class="w-full h-32 object-cover rounded-t-lg" alt="Coconut Oil">
                     <div class="p-3">
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Oil</h3>
                         <div class="mb-2">
                             <label for="coconut-oil-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="coconut-oil-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <select id="coconut-oil-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
                                 <option value="1 liter">1 liter - &#8377;35</option>
                                 <option value="2 liters">2 liters - &#8377;70</option>
                                 <option value="5 liters">5 liters - &#8377;175</option>
@@ -48,11 +140,11 @@
                         </div>
                         <div class="mb-2">
                             <label for="coconut-oil-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="coconut-oil-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <input type="number" id="coconut-oil-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +155,8 @@
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Shell</h3>
                         <div class="mb-2">
                             <label for="coconut-shell-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="coconut-shell-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <select id="coconut-shell-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
                                 <option value="1 kg">1 kg - &#8377;50</option>
                                 <option value="2 kg">2 kg - &#8377;100</option>
                                 <option value="5 kg">5 kg - &#8377;250</option>
@@ -71,11 +164,11 @@
                         </div>
                         <div class="mb-2">
                             <label for="coconut-shell-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="coconut-shell-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <input type="number" id="coconut-shell-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
@@ -86,7 +179,8 @@
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Water</h3>
                         <div class="mb-2">
                             <label for="coconut-water-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="coconut-water-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <select id="coconut-water-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
                                 <option value="300 ml">300 ml - &#8377;50</option>
                                 <option value="500 ml">500 ml - &#8377;80</option>
                                 <option value="1 liter">1 liter - &#8377;150</option>
@@ -94,22 +188,23 @@
                         </div>
                         <div class="mb-2">
                             <label for="coconut-water-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="coconut-water-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <input type="number" id="coconut-water-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
                 <!-- Product Card 4 - Nattu Kholi -->
-                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                <div class="product-card Poultry bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
                     <img src="image/hen.png" class="w-full h-32 object-cover rounded-t-lg" alt="Nattu Kholi">
                     <div class="p-3">
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Nattu Kholi</h3>
                         <div class="mb-2">
                             <label for="nattu-kholi-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="nattu-kholi-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <select id="nattu-kholi-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
                                 <option value="1 kg">1 kg - &#8377;500</option>
                                 <option value="2 kg">2 kg - &#8377;1000</option>
                                 <option value="5 kg">5 kg - &#8377;2500</option>
@@ -117,120 +212,289 @@
                         </div>
                         <div class="mb-2">
                             <label for="nattu-kholi-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="nattu-kholi-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <input type="number" id="nattu-kholi-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
-                <!-- Product Card 5 - Egg -->
-                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
-                    <img src="image/eggs.png" class="w-full h-32 object-cover rounded-t-lg" alt="Egg">
+                <!-- Product Card 5 - Nattu Koli Egg -->
+                <div class="product-card Poultry bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                    <img src="image/nattu_koli_egg.png" class="w-full h-32 object-cover rounded-t-lg" alt="Nattu Koli Egg">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Egg</h3>
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Nattu Koli Egg</h3>
                         <div class="mb-2">
-                            <label for="egg-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="egg-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                                <option value="1 dozen">1 dozen - &#8377;120</option>
-                                <option value="2 dozen">2 dozen - &#8377;240</option>
-                                <option value="5 dozen">5 dozen - &#8377;600</option>
+                            <label for="nattu-koli-egg-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="nattu-koli-egg-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="1">1 - &#8377;8</option>
+                                <option value="6">6 - &#8377;48</option>
+                                <option value="12">12 - &#8377;96</option>
                             </select>
                         </div>
                         <div class="mb-2">
-                            <label for="egg-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="egg-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <label for="nattu-koli-egg-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="nattu-koli-egg-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
-                <!-- Product Card 6 - Fish -->
-                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
-                    <img src="image/fish.png" class="w-full h-32 object-cover rounded-t-lg" alt="Fish">
+                <!-- Product Card 6 - Country Chicken -->
+                <div class="product-card Poultry bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
+                    <img src="image/country_chicken.png" class="w-full h-32 object-cover rounded-t-lg" alt="Country Chicken">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Rice</h3>
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Country Chicken</h3>
                         <div class="mb-2">
-                            <label for="fish-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="fish-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                                <option value="1 kg">1 kg - &#8377;200</option>
-                                <option value="2 kg">2 kg - &#8377;400</option>
-                                <option value="5 kg">5 kg - &#8377;1000</option>
+                            <label for="country-chicken-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="country-chicken-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="1 kg">1 kg - &#8377;350</option>
+                                <option value="2 kg">2 kg - &#8377;700</option>
+                                <option value="5 kg">5 kg - &#8377;1750</option>
                             </select>
                         </div>
                         <div class="mb-2">
-                            <label for="fish-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="fish-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <label for="country-chicken-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="country-chicken-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
-                <!-- Product Card 7 - Peanut -->
-                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
-                    <img src="image/peanut.png" class="w-full h-32 object-cover rounded-t-lg" alt="Peanut">
+                
+                <!-- New Rice Product Card 2 - Sona Masoori Rice -->
+                <div class="product-card rice bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
+                    <img src="image/sona_masoori_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Sona Masoori Rice">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Peanut</h3>
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Akshaya Rice</h3>
                         <div class="mb-2">
-                            <label for="peanut-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="peanut-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                                <option value="1 kg">1 kg - &#8377;100</option>
-                                <option value="2 kg">2 kg - &#8377;200</option>
-                                <option value="5 kg">5 kg - &#8377;500</option>
+                            <label for="sona-masoori-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="sona-masoori-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="5 kg">5 kg - &#8377;340</option>
+                                <option value="10 kg">10 kg - &#8377;640</option>
+                                <option value="26 kg">26 kg - &#8377;1650</option>
                             </select>
                         </div>
                         <div class="mb-2">
-                            <label for="peanut-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="peanut-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <label for="sona-masoori-rice-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="sona-masoori-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
-                <!-- Product Card 8 - Moringa -->
-                <div class="product-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
-                    <img src="image/moringa.png" class="w-full h-32 object-cover rounded-t-lg" alt="Moringa">
+                <!-- New Rice Product Card 3 - Jasmine Rice -->
+                <div class="product-card rice bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
+                    <img src="image/jasmine_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Jasmine Rice">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Moringa</h3>
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Nei kichadi rice</h3>
                         <div class="mb-2">
-                            <label for="moringa-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="moringa-range" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                                <option value="1 kg">1 kg - &#8377;120</option>
-                                <option value="2 kg">2 kg - &#8377;240</option>
-                                <option value="5 kg">5 kg - &#8377;600</option>
+                            <label for="jasmine-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="jasmine-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="5 kg">5 kg - &#8377;330</option>
+                                <option value="10 kg">10 kg - &#8377;640</option>
+                                <option value="26 kg">26 kg - &#8377;1650</option>
                             </select>
                         </div>
                         <div class="mb-2">
-                            <label for="moringa-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                            <input type="number" id="moringa-quantity" class="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                            <label for="jasmine-rice-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="jasmine-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
                             <button class="w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
                         </div>
                     </div>
                 </div>
-                <!-- Add more product cards as needed -->
+                <!-- New Rice Product Card 4 - Brown Rice -->
+                <div class="product-card rice bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
+                    <img src="image/brown_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Brown Rice">
+                    <div class="p-3">
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Akshaya Gold Rice</h3>
+                        <div class="mb-2">
+                            <label for="brown-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
+                            <select id="brown-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="" disabled selected>Select a range</option>
+                                <!-- <option value="1 kg">1 kg - &#8377;110</option> -->
+                                <!-- <option value="2 kg">2 kg - &#8377;220</option> -->
+                                <option value="26 kg">26 kg - &#8377;1750</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="brown-rice-quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" id="brown-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
+                        </div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded" disabled>Add to Cart</button>
+                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded" disabled>Place Order</button>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
         </div>
     </section>
+    <section id="contact" class="" style="background-image: url(image/contact-bg.jpg);">
+        <p class="text-base font-semibold uppercase text-center tracking-wide text-blue-600 dark:text-blue-200 py-2">
+            Contact
+        </p>
+        <h2 class="font-heading font-bold tracking-tight text-center text-white text-3xl sm:text-5xl">
+            Get in Touch
+        </h2>
+        <div class="mx-auto flex items-center justify-center px-4 py-10 sm:px-6 lg:px-8 lg:py-10">
+            <div class="container max-w-2xl bg-gray-400 bg-opacity-50 hover:bg-opacity-75 transition duration-300 p-3">
+                <div id="form">
+                    <form id="contactForm" action="https://formspree.io/f/xqazzwrw" method="POST">
+                        <div class="mb-6">
+                            <div class="mx-0 mb-1 sm:mb-4">
+                                <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input
+                                    type="text" id="name" autocomplete="given-name" placeholder="Your name"
+                                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                    name="name">
+                            </div>
+                            <div class="mx-0 mb-1 sm:mb-4">
+                                <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label><input
+                                    type="email" id="email" autocomplete="email" placeholder="Your email address"
+                                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                    name="email">
+                            </div>
+                            <div class="mx-0 mb-1 sm:mb-4">
+                                <label for="phone" class="pb-1 text-xs uppercase tracking-wider"></label><input
+                                    type="tel" id="phone" autocomplete="tel" placeholder="Your mobile number"
+                                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                    name="phone">
+                            </div>
+                            <div class="mx-0 mb-1 sm:mb-4">
+                                <label for="product" class="pb-1 text-xs uppercase tracking-wider"></label><input
+                                    type="text" id="product" autocomplete="given-name" placeholder="Product Name"
+                                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                    name="product">
+                            </div>
+                            <div class="mx-0 mb-1 sm:mb-4">
+                                <label for="quantity" class="pb-1 text-xs uppercase tracking-wider"></label><input
+                                    type="text" id="quantity" autocomplete="given-name" placeholder="Quantity"
+                                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                    name="quantity">
+                            </div>
+                            <div class="mx-0 mb-1 sm:mb-4">
+                                <label for="textarea" class="pb-1 text-xs uppercase tracking-wider"></label><textarea
+                                    id="textarea" name="textarea" cols="30" rows="5" placeholder="Write your message..."
+                                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+                        </div>
+                        <h2 class="text-sm font-bold text-white mb-2">Ready to Get Started?</h2>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const productCards = document.querySelectorAll('.product-card');
 
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const categorySelect = document.getElementById("category-select");
-            const productCards = document.querySelectorAll(".product-card");
+            productCards.forEach(card => {
+                const rangeSelect = card.querySelector('.product-range');
+                const quantityInput = card.querySelector('.product-quantity');
+                const addToCartButton = card.querySelector('.add-to-cart');
+                const placeOrderButton = card.querySelector('.place-order');
+                const productName = card.querySelector('h3').innerText;
 
-            categorySelect.addEventListener("change", function () {
-                const selectedCategory = this.value;
-                productCards.forEach(card => {
-                    if (selectedCategory === "all" || card.dataset.category ===
-</script> -->
+                function updateButtons() {
+                    if (rangeSelect.value && quantityInput.value > 0) {
+                        addToCartButton.disabled = false;
+                        placeOrderButton.disabled = false;
+                    } else {
+                        addToCartButton.disabled = true;
+                        placeOrderButton.disabled = true;
+                    }
+                }
+
+                function redirectToContact() {
+                    const range = rangeSelect.value;
+                    const quantity = quantityInput.value;
+
+                    // Fill the contact form
+                    document.getElementById('product').value = productName;
+                    document.getElementById('quantity').value = quantity + ' (' + range + ')';
+
+                    console.log('Product Name:', productName);
+                    console.log('Range:', range);
+                    console.log('Quantity:', quantity);
+
+                    // Redirect to the contact section
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                }
+
+                rangeSelect.addEventListener('change', updateButtons);
+                quantityInput.addEventListener('input', updateButtons);
+
+                placeOrderButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    redirectToContact();
+                });
+            });
+        });
+        // 
+          document.getElementById('category-select').addEventListener('change', function () {
+                    var selectedCategory = this.value;
+                    var productCards = document.getElementsByClassName('product-card');
+                    
+                    for (var i = 0; i < productCards.length; i++) {
+                        var card = productCards[i];
+                        if (selectedCategory === 'all' || card.classList.contains(selectedCategory)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+
+                // 
+                // Object to store product counts
+    let productCounts = {};
+
+// Function to update cart count
+function updateCartCount() {
+    let totalCount = 0;
+    // Loop through product counts and sum total
+    for (let key in productCounts) {
+        totalCount += productCounts[key];
+    }
+    // Update the total count in the cart icon
+    document.getElementById('cart-count').innerText = totalCount;
+}
+
+// Add event listeners to all 'Add to Cart' buttons
+let addToCartButtons = document.querySelectorAll('.product-card .bg-green-500');
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        let productId = this.closest('.product-card').getAttribute('data-product-id'); // Assuming you set a data-product-id attribute
+        // Increase count for the product ID
+        if (productId) {
+            if (!productCounts[productId]) {
+                productCounts[productId] = 0;
+            }
+            productCounts[productId]++;
+            // Update cart count display
+            updateCartCount();
+        }
+    });
+});
+    </script>
 </body>
+
 </html>
