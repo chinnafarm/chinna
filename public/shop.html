@@ -54,7 +54,15 @@
             
 
                 <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
-                    <img src="image/wild_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
+                    <div class="relative">
+                        <div class="product-images">
+                            <img src="image/lemon(1).png" class="w-full h-32 object-cover rounded-t-lg" alt="Lemon Image 1">
+                            <img src="image/lemon.png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Lemon Image 2">
+                            <img src="image/lemon(3).png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Lemon Image 3">
+                        </div>
+                        <button id="prevImage" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-l">Prev</button>
+                        <button id="nextImage" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-r">Next</button>
+                    </div>
                     <div class="p-3">
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
                         <div class="mb-2">
@@ -78,9 +86,9 @@
                 </div>
                 <!--  -->
                 <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
-                    <img src="image/wild_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
+                    <img src="image/" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
+                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Dry Lemon</h3>
                         <div class="mb-2">
                             <label for="wild-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="wild-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -494,6 +502,30 @@ addToCartButtons.forEach(button => {
         }
     });
 });
+
+// 
+document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.product-images img');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle('hidden', i !== index);
+                });
+            }
+
+            document.getElementById('prevImage').addEventListener('click', function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                showImage(currentIndex);
+            });
+
+            document.getElementById('nextImage').addEventListener('click', function() {
+                currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                showImage(currentIndex);
+            });
+
+            showImage(currentIndex);
+        });
     </script>
 </body>
 

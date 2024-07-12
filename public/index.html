@@ -136,18 +136,12 @@
                     <p class=" lg:text-3xl mt-10 text-gray-200 font-semibold br-2">
                         Bringing the Farm to Your Doorstep
                     </p>
-                    <button class="bg-green-800 mt-4 text-white py-2 p-1 font-semibold">Get In Touch</button>
+                    <button class="bg-gray-500 mt-4 text-white py-2 p-1 font-semibold hover:transition-300">Get In Touch</button>
+                    
                 </div>
             </div>
             <div class="flex justify-center lg:justify-end lg:pr-4">
-                <svg class="animate-bounce w-6 h-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
-                        clip-rule="evenodd" />
-                    <path fill-rule="evenodd"
-                        d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z" />
-                </svg>
+             
                 <!-- <a href="#contact">
                     <span class="bg-white text-yellow-500 font-bold rounded-2xl px-2 -mb-7">Scroll down</span>
                 </a> -->
@@ -353,13 +347,17 @@
 
 
             </div>
+            <div class="flex">
+                <button id="buyButton" class="bg-white mt-4 ml-auto p-1 w-full h-full">BUY</button>
+            </div>
         </div>
+       
 
     </section>
     <!--contact-->
 
     <section id="contact" class="" style="background-image: url(image/contact-bg.jpg);">
-        <p class="text-base font-semibold uppercase text-center tracking-wide text-blue-600 dark:text-blue-200 py-2">
+        <p class="text-base font-bold uppercase text-center tracking-wide text-yellow-500 dark:text-blue-200 py-2">
             Contact
         </p>
         <h2
@@ -367,11 +365,11 @@
             Get in Touch
         </h2>
 
-        <div class=" mx-auto flex items-center justify-center px-4 py-10 sm:px-6 lg:px-8 lg:py-10 ">
-            <div class="container max-w-2xl bg-gray-400 bg-opacity-50 hover:bg-opacity-75 transition duration-300 p-3">
+        <div class="w-3/4  flex items-start justify-start px-4 py-10 sm:px-6 lg:px-8 lg:py-10 sm:mx-auto">
+            <div class="container w-2/4 bg-gray-400 bg-opacity-50 hover:bg-opacity-75 transition duration-300 p-3">
                 <div class="   " id="form">
                     <form id="contactForm" action="https://formspree.io/f/xqazzwrw" method="POST">
-                        <div class="mb-6">
+                        <div class="mb-6 ">
                             <div class="mx-0 mb-1 sm:mb-4">
                                 <div class="mx-0 mb-1 sm:mb-4">
                                     <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input
@@ -392,25 +390,25 @@
                                         name="phone">
                                 </div>
                             </div>
-                            <div class="mx-0 mb-1 sm:mb-4">
+                            <!-- <div class="mx-0 mb-1 sm:mb-4">
                                 <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input
                                     type="text" id="product" autocomplete="given-name" placeholder="Product Name"
                                     class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                     name="your order">
-                            </div>
-                            <div class="mx-0 mb-1 sm:mb-4">
+                            </div> -->
+                            <!-- <div class="mx-0 mb-1 sm:mb-4">
                                 <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input
                                     type="text" id="quantity" autocomplete="given-name" placeholder="Quantity"
                                     class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                     name="your order">
-                            </div>
+                            </div> -->
                             <div class="mx-0 mb-1 sm:mb-4">
                                 <label for="textarea" class="pb-1 text-xs uppercase tracking-wider"></label><textarea
                                     id="textarea" name="textarea" cols="30" rows="5" placeholder="Write your message..."
                                     class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
                             </div>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center ">
                             <button type="submit"
                                 class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send
                                 Message</button>
@@ -564,6 +562,16 @@
             return false;
         }
     });
+
+    // buy  
+
+    function navigateToShop() {
+            window.location.href = './shop.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('buyButton').addEventListener('click', navigateToShop);
+        });
 
 
     </script>
