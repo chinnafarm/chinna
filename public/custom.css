@@ -9,4 +9,20 @@
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   }
 
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Slightly below the view */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
   
+  /* Visible state (animation end) */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Image hover effect */
+  .image-container img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }

@@ -8,7 +8,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> chinna's farming</title>
+    <link rel="icon" href="image/PetFace Logo.svg" type="image/svg+xml">
+    <title>chinna's farming</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HXWM0ZRH8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -26,23 +27,15 @@
     <link rel="stylesheet" href="custom.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "AgriculturalOrganization",
-          "name": "Chinna's Farming",
-          "description": "Chinna's Farming specializes in organic lemon farming and lemon export with a focus on sustainable agriculture practices.",
-          "url": "https://www.chinnasfarming.com",
-          "logo": "https://www.chinnasfarming.com/logo.png"
-        }
-        </script>
+   
+  
 </head>
 
 <body class="overflow-x-hidden">
-    <section class="relative w-full overflow-hidden">
+    <section id="home" class="relative w-full overflow-hidden">
         <div class="fixed relative flex items-center justify-between lg:bg-green-700 lg:w-full lg:px-10">
-            <div class="flex items-center justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
-                <img src="image/PetFace Logo.svg" class="h-10 w-20">
+            <div class="flex items-center justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 ">
+                <img src="image/4.svg" class="h-12   w-20">
             </div>
             <div class="flex items-center lg:order-2">
                 <button id="menuButton" class="text-blue-800 hover:text-blue-800 lg:hidden" onclick="menuClick()">
@@ -57,16 +50,16 @@
                     </svg>
                 </button>
             </div>
-            <div class="hidden lg:flex lg:order-1 lg:w-full lg:justify-between lg:items-center">
+            <div class=" hidden lg:flex lg:order-1 lg:w-full lg:justify-between lg:items-center p-3">
                 <ul class="flex font-bold text-white space-x-4">
                     <li class="hover:text-yellow-500">
-                        <a class="px-2 py-3 hover:underline cursor-pointer" href="#section">HOME</a>
+                        <a class="px-2 py-3 hover:underline cursor-pointer" href="#home">HOME</a>
                     </li>
                     <li class="hover:text-yellow-500">
                         <a class="px-2 py-3 hover:underline cursor-pointer" href="#about">ABOUT</a>
                     </li>
                     <li class="hover:text-yellow-500">
-                        <a class="px-2 py-3 hover:underline cursor-pointer" href="#gallery">GALLERY</a>
+                        <a class="px-2 py-3 hover:underline cursor-pointer" href="#owner">OWNER'S</a>
                     </li>
                 </ul>
                 <ul class="flex font-bold text-white space-x-4">
@@ -87,7 +80,7 @@
             <div class="hidden flex justify-center bg-transparent" id="mobileMenu">
                 <ul class="lg:hidden text-yellow-600 font-bold">
                     <li class="mt-1 rounded">
-                        <a class="px-2 hover:underline cursor-pointer hover:text-yellow-500" href="#section">HOME</a>
+                        <a class="px-2 hover:underline cursor-pointer hover:text-yellow-500" href="#home">HOME</a>
                     </li>
                     <li class="mt-1 rounded">
                         <a class="px-2 hover:underline cursor-pointer hover:text-yellow-500" href="#about">ABOUT</a>
@@ -106,15 +99,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex py-11 px-4 lg:py-36 justify-center items-center text-center ">
+            <div class="flex py-11 px-4 lg:py-28 justify-center items-center text-center ">
                 <div class="w-full">
-                    <h2 class="text-2xl lg:text-6xl font-semibold text-green-500 hover:text-yellow-500">
-                        CHINNA'S FARMING
-                    </h2>
-                    <p class="lg:text-3xl lg:mt-10 text-yellow-500 font-semibold br-2">
+                   
+                    <img src="image/5.svg" class="h-40 w-full">
+                    <p class="lg:text-3xl lg:mt-5 text-yellow-500 font-semibold br-2">
                         Bringing the Farm to Your Doorstep
                     </p>
-                    <button class="bg-gray-500 mt-4 text-white py-2 p-1 font-semibold hover:transition-300" 
+                    <button class="bg-gray-500 mt-4 text-white py-2 p-3 font-semibold hover:transition-300 rounded-md" 
                     onclick="window.location.href='https://wa.me/8148530305'">Get In Touch</button>
                 </div>
             </div>
@@ -123,7 +115,7 @@
 
 
         <!--OWNER-->
-        <section class="animated-bg">
+        <section id="owner" class="owner">
             <div class="container bg-lime-green py-10 px-4 mx-auto">
                 <h2 class="text-2xl lg:text-5xl text-center font-bold text-yellow-500">Owner's</h2>
                 <div class="flex flex-col lg:flex-row md:flex-row  gap-4 mt-4">
@@ -259,7 +251,7 @@
                 <div class="bg-white hover:shadow-xl rounded-lg overflow-hidden sm:object-center">
                     <img src="image/lemon.png" class="w-full h-20 object-cover object-center" alt="product Image">
                     <div class="p-3">
-                        <h3 class="text-md font-bold text-yellow-500">Lemon</h3>
+                        <h3 class="text-md font-bold text-yellow-500">organic lemons</h3>
                         <p class="text-sm font-semibold text-gray-500">Directly consumed from farmer's </p>
                         <p class="text-sm text-gray-600 mt-2 text-yellow-500"><strong>Why Choose Us?</strong></p>
                         <ul class="list-disc list-inside text-sm text-gray-600">
@@ -293,7 +285,7 @@
 
             </div>
             <div class="flex">
-                <button id="buyButton" class="bg-white mt-4 ml-auto p-1 w-full h-full"
+                <button id="buyButton" class="bg-yellow-100 mt-4 ml-auto p-1 w-full h-full rounded-2xl"
                 onclick="window.location.href='shop.html'">BUY</button>
             </div>
         </div>
@@ -410,13 +402,25 @@
     </footer>
     <script src="./main.js"></script>
     <script>
-          gsap.to("#bg", {
-            background: "linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%)",
-            duration: 4,
-            repeat: -1,
-            yoyo: true,
-            ease: "linear"
-        });
+         document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+      threshold: 0.1, // Trigger when 10% of the section is visible
+    };
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once it's visible
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach(element => observer.observe(element));
+  });
         function menuClick() {
             const menu = document.getElementById('mobileMenu');
             const menuIcon = document.getElementById('menuIcon');
@@ -425,79 +429,7 @@
             menuIcon.classList.toggle('hidden');
             closeIcon.classList.toggle('hidden');
         }
-
-        const gallery = document.getElementById('imageGallery');
-
-        // Highlight the center image
-        function highlightCenterImage() {
-            // Remove highlight from previous center image
-            const highlightedImage = document.querySelector('.highlighted');
-            if (highlightedImage) {
-                highlightedImage.classList.remove('highlighted');
-            }
-
-            // Highlight new center image
-            const images = gallery.querySelectorAll('img');
-            const galleryRect = gallery.getBoundingClientRect();
-            images.forEach(img => {
-                const imgRect = img.getBoundingClientRect();
-                const imgCenter = imgRect.left + imgRect.width / 2;
-                const galleryCenter = galleryRect.left + galleryRect.width / 2;
-                if (Math.abs(imgCenter - galleryCenter) < galleryRect.width / 2) {
-                    img.classList.add('highlighted');
-                }
-            });
-        }
-
-        // Scroll the gallery automatically
-        let scrollInterval;
-        function startAutoScroll() {
-            scrollInterval = setInterval(() => {
-                gallery.scrollLeft += 2; // Adjust scroll speed as needed
-                highlightCenterImage();
-                if (gallery.scrollLeft >= gallery.scrollWidth - gallery.offsetWidth) {
-                    gallery.scrollTo(0, 0);
-                }
-            }, 20); // Adjust scroll interval as needed
-        }
-
-        function stopAutoScroll() {
-            clearInterval(scrollInterval);
-        }
-
-        // Start automatic scrolling when the page loads
-        window.onload = () => {
-            startAutoScroll();
-        };
-
-        // Stop auto scroll on hover
-        gallery.addEventListener('mouseover', () => {
-            stopAutoScroll();
-        });
-
-        // Resume auto scroll on mouse leave
-        gallery.addEventListener('mouseleave', () => {
-            startAutoScroll();
-
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const images = document.querySelectorAll("#imageGallery .group");
-
-            images.forEach(image => {
-                image.addEventListener("mousemove", (e) => {
-                    const rect = image.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-
-                    image.style.transform = `rotateX(${-(y - rect.height / 2) / 10}deg) rotateY(${(x - rect.width / 2) / 10}deg)`;
-                });
-
-                image.addEventListener("mouseleave", () => {
-                    image.style.transform = "rotateX(0) rotateY(0)";
-                });
-            });
-        });
+        
 
         document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
