@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/PetFace Logo.svg" type="image/svg+xml">
     <title>SHOP</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HXWM0ZRH8"></script>
+    <meta name="description" content="Chinna's Farming specializes in organic lemon farming and lemon export. Discover our high-quality organic lemons and sustainable farming practices.">
+    <meta name="keywords" content="lemon,buylemon, fresh lemon, organic lemons, lemon export, sustainable farming, Chinna's Farming, lemon growers, organic agriculture,lemon export from india">
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -14,32 +17,37 @@
     </script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- <style>
-        .container {
-            max-width: 960px; /* Adjust as per your layout */
-            margin: 0 auto;
-        }
-    </style> -->
+  
 </head>
 
 <body>
     <section id="shopping" class="bg-gray-100">
+        <div class="fixed relative flex items-center justify-between lg:bg-green-700 lg:w-full lg:px-10">
+            <div class="flex items-center justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 ">
+                <img src="image/PetFace Logo.svg" class="h-12   w-20">
+            </div>
+           
+           
+    </div>
+       
      
-            <div class="container fixed top-0">
+            <!-- <div class="container fixed top-0">
+                
                 <div class="text-start bg-green-800 relative">
                     <h2 class="text-1xl lg:text-3xl font-semibold text-white p-1">
                         Products
                     </h2>
+                    
                     <div class="absolute top-0 right-0 mt-2 mr-2">
                         <a href="#" class="text-white">
                             <i class="fas fa-shopping-cart" id="cart-icon"></i> <span id="cart-count">0</span>
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="container  mx-auto">
-            <div class="text-center mt-16">
-                <select id="category-select" class="mt-1 block w-1/2 mx-auto p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            <div class="text-center mt-10 ">
+                <select id="category-select" class="mt-1 block lg:w-1/2 sm:w-full mx-auto p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     <option value="all">All Products</option>
                     <option value="coconut">Coconut</option>
                     <option value="lemon">Lemon</option>
@@ -48,7 +56,7 @@
                     <!-- Add more options as needed -->
                 </select>
             </div>
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 py-10">
+            <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 py-10">
                 <!-- Existing Product Cards -->
                 <!-- Product Card 1 - Coconut Oil -->
             
@@ -58,16 +66,16 @@
                         <div class="product-images">
                             <img src="image/lemon(1).png" class="w-full h-32 object-cover rounded-t-lg" alt="Lemon Image 1">
                             <img src="image/lemon.png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Lemon Image 2">
-                            <img src="image/lemon(3).png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Lemon Image 3">
+                            <img src="image/lemon(1).png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Lemon Image 3">
                         </div>
-                        <button id="prevImage" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-l">Prev</button>
-                        <button id="nextImage" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-r">Next</button>
+                        <button id="prevImage" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-l"><</button>
+                        <button id="nextImage" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-r">></button>
                     </div>
                     <div class="p-3">
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
                         <div class="mb-2">
-                            <label for="wild-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
-                            <select id="wild-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <label for="wild-rice-range" class="block sm:text-base  text-gray-700">Select Range</label>
+                            <select id="wild-rice-range" class="product-range text-base mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                                 <option value="" disabled selected>Select a range</option>
                                 <option value="1 kg - ₹180">1 kg - ₹180</option>
                                 <option value="2 kg - ₹360">2 kg - ₹360</option>
@@ -79,8 +87,8 @@
                             <input type="number" id="wild-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button id="add-to-cart" class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded" disabled>Add to Cart</button>
-                            <button id="place-order" class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded" disabled>Place Order</button>
+                            <button id="add-to-cart" class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold lg:py-1 h-5 w-auto rounded" disabled>Add to Cart</button>
+                            <button id="place-order" class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold lg:py-1 h-5 rounded" disabled>Place Order</button>
                         </div>
                     </div>
                 </div>
