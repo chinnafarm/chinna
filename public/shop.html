@@ -24,7 +24,7 @@
 <body>
     <section id="shopping" class="bg-gray-100">
         <div class="fixed relative flex items-center justify-between lg:bg-green-700 lg:w-full lg:px-10">
-            <div class="flex items-center justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 ">
+            <div class="flex items-center justify-center mt-8 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 ">
                 <img src="image/PetFace Logo.svg" class="h-12   w-20">
             </div>
            
@@ -62,18 +62,18 @@
                 <!-- Product Card 1 - Coconut Oil -->
             
 
-                <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
+                <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="lemon">
                     <div class="relative">
                         <div class="product-images">
-                            <img src="image/lemon(1).png" class="w-full h-32 object-cover rounded-t-lg" alt="Lemon Image 1">
-                            <img src="image/lemon.png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Lemon Image 2">
-                            <img src="image/lemon(1).png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Lemon Image 3">
+                            <img src="image/lemon(1).png" class="w-full h-32 object-cover rounded-t-lg" alt="Fresh organic lemons harvested from Chinna’s Farming  ">
+                            <img src="image/lemon.png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Ripe organic lemon growing on a tree at Chinna’s Farming">
+                            <img src="image/lemon(1).png" class="w-full h-32 object-cover rounded-t-lg hidden" alt="Export-quality organic lemons ready for shipment from Chinna’s Farming ">
                         </div>
                         <button id="prevImage" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-l"><</button>
                         <button id="nextImage" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-r">></button>
                     </div>
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Organic Lemons</h1>
                         <div class="mb-2">
                             <label for="wild-rice-range" class="block sm:text-base  text-gray-700">Select Range</label>
                             <select id="wild-rice-range" class="product-range text-base mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -94,10 +94,10 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
-                    <img src="image/" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
+                <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="lemon">
+                    <img src="image/" class="w-full h-32 object-cover rounded-t-lg" alt="Freshly squeezed organic lemon juice for healthy cooking">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Dry Lemon</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Dry Lemon</h1>
                         <div class="mb-2">
                             <label for="wild-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="wild-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -119,9 +119,9 @@
                 </div>
                 <!--  -->
                 <div class="product-card lemon bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
-                    <img src="image/wild_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Wild Rice">
+                    <img src="image/wild_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Organic lemons packed in eco-friendly wooden crates for export">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Lemon</h1>
                         <div class="mb-2">
                             <label for="wild-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="wild-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -136,14 +136,14 @@
                             <input type="number" id="wild-rice-quantity" class="product-quantity mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" min="1" value="1">
                         </div>
                         <div class="flex space-x-2 mb-2">
-                            <button class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold py-1 rounded">Add to Cart</button>
-                            <button class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 rounded">Place Order</button>
+                            <button id="add-to-cart" class="add-to-cart w-1/2 bg-green-500 hover:bg-green-600 text-white font-semibold lg:py-1 h-5 w-auto rounded" disabled>Add to Cart</button>
+                            <button id="place-order" class="place-order w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold lg:py-1 h-5 rounded" disabled>Place Order</button>
                         </div>
                     </div>
                 </div>
                 <!--  -->
                 <div class="product-card coconut bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="coconut">
-                    <img src="image/coconut.png" class="w-full h-32 object-cover rounded-t-lg" alt="Coconut Oil">
+                    <img src="image/coconut.png" class="w-full h-32 object-cover rounded-t-lg" alt=" Pure organic coconut oil from Chinna’s Farming">
                     <div class="p-3">
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Oil</h3>
                         <div class="mb-2">
@@ -167,7 +167,7 @@
                 </div>
                 <!-- Product Card 2 - Coconut Shell -->
                 <div class="product-card coconut bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="coconut">
-                    <img src="image/coconut_shell.png" class="w-full h-32 object-cover rounded-t-lg" alt="Coconut Shell">
+                    <img src="image/coconut_shell.png" class="w-full h-32 object-cover rounded-t-lg" alt="Fresh organic coconuts growing on a tree at Chinna’s Farming">
                     <div class="p-3">
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Shell</h3>
                         <div class="mb-2">
@@ -191,7 +191,7 @@
                 </div>
                 <!-- Product Card 3 - Coconut Water -->
                 <div class="product-card coconut bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="coconut">
-                    <img src="image/coconut_water.png" class="w-full h-32 object-cover rounded-t-lg" alt="Coconut Water">
+                    <img src="image/coconut_water.png" class="w-full h-32 object-cover rounded-t-lg" alt="A pile of fresh organic coconuts harvested at Chinna’s Farming">
                     <div class="p-3">
                         <h3 class="text-lg font-bold text-yellow-500 mb-2">Coconut Water</h3>
                         <div class="mb-2">
@@ -217,7 +217,7 @@
                 <div class="product-card Poultry bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
                     <img src="image/hen.png" class="w-full h-32 object-cover rounded-t-lg" alt="Nattu Kholi">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Nattu Kholi</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Nattu Kholi</h1>
                         <div class="mb-2">
                             <label for="nattu-kholi-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="nattu-kholi-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -241,7 +241,7 @@
                 <div class="product-card Poultry bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
                     <img src="image/nattu_koli_egg.png" class="w-full h-32 object-cover rounded-t-lg" alt="Nattu Koli Egg">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Nattu Koli Egg</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Nattu Koli Egg</h1>
                         <div class="mb-2">
                             <label for="nattu-koli-egg-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="nattu-koli-egg-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -265,7 +265,7 @@
                 <div class="product-card Poultry bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="other">
                     <img src="image/country_chicken.png" class="w-full h-32 object-cover rounded-t-lg" alt="Country Chicken">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Country Chicken</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Country Chicken</h1>
                         <div class="mb-2">
                             <label for="country-chicken-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="country-chicken-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -290,7 +290,7 @@
                 <div class="product-card rice bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
                     <img src="image/sona_masoori_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Sona Masoori Rice">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Akshaya Rice</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Akshaya Rice</h1>
                         <div class="mb-2">
                             <label for="sona-masoori-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="sona-masoori-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -314,7 +314,7 @@
                 <div class="product-card rice bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
                     <img src="image/jasmine_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Jasmine Rice">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Nei kichadi rice</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Nei kichadi rice</h1>
                         <div class="mb-2">
                             <label for="jasmine-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="jasmine-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -338,7 +338,7 @@
                 <div class="product-card rice bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300" data-category="rice">
                     <img src="image/brown_rice.png" class="w-full h-32 object-cover rounded-t-lg" alt="Brown Rice">
                     <div class="p-3">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-2">Akshaya Gold Rice</h3>
+                        <h1 class="text-lg font-bold text-yellow-500 mb-2">Akshaya Gold Rice</h1>
                         <div class="mb-2">
                             <label for="brown-rice-range" class="block text-sm font-medium text-gray-700">Select Range</label>
                             <select id="brown-rice-range" class="product-range mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
@@ -420,51 +420,54 @@
         </div>
     </section>
     <script>
+    
     document.addEventListener('DOMContentLoaded', function() {
-            const productCards = document.querySelectorAll('.product-card');
+        const productCards = document.querySelectorAll('.product-card');
 
-            productCards.forEach(card => {
-                const rangeSelect = card.querySelector('.product-range');
-                const quantityInput = card.querySelector('.product-quantity');
-                const addToCartButton = card.querySelector('.add-to-cart');
-                const placeOrderButton = card.querySelector('.place-order');
-                const productName = card.querySelector('h3').innerText;
+        productCards.forEach(card => {
+            const rangeSelect = card.querySelector('.product-range');
+            const quantityInput = card.querySelector('.product-quantity');
+            const addToCartButton = card.querySelector('.add-to-cart');
+            const placeOrderButton = card.querySelector('.place-order');
+            const productName = card.querySelector('h1, h3').innerText;
 
-                function updateButtons() {
-                    if (rangeSelect.value && quantityInput.value > 0) {
-                        addToCartButton.disabled = false;
-                        placeOrderButton.disabled = false;
-                    } else {
-                        addToCartButton.disabled = true;
-                        placeOrderButton.disabled = true;
-                    }
+            function updateButtons() {
+                if (rangeSelect.value && quantityInput.value > 0) {
+                    addToCartButton.disabled = false;
+                    placeOrderButton.disabled = false;
+                } else {
+                    addToCartButton.disabled = true;
+                    placeOrderButton.disabled = true;
                 }
+            }
 
-                function redirectToContact() {
-                    const range = rangeSelect.value;
-                    const quantity = quantityInput.value;
+            function redirectToContact() {
+                const range = rangeSelect.value;
+                const quantity = quantityInput.value;
 
-                    // Fill the contact form
-                    document.getElementById('product').value = productName;
-                    document.getElementById('quantity').value = quantity + ' (' + range + ')';
+                // Fill the contact form
+                document.getElementById('product').value = productName;
+                document.getElementById('quantity').value = quantity + ' (' + range + ')';
 
-                    console.log('Product Name:', productName);
-                    console.log('Range:', range);
-                    console.log('Quantity:', quantity);
+                console.log('Product Name:', productName);
+                console.log('Range:', range);
+                console.log('Quantity:', quantity);
 
-                    // Redirect to the contact section
-                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                }
+                // Redirect to the contact section
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
 
-                rangeSelect.addEventListener('change', updateButtons);
-                quantityInput.addEventListener('input', updateButtons);
+            rangeSelect.addEventListener('change', updateButtons);
+            quantityInput.addEventListener('input', updateButtons);
 
-                placeOrderButton.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    redirectToContact();
-                });
+            placeOrderButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                redirectToContact();
             });
         });
+    });
+
+
         // 
           document.getElementById('category-select').addEventListener('change', function () {
                     var selectedCategory = this.value;
